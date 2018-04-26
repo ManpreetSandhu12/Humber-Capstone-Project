@@ -1,0 +1,25 @@
+Steps to change base url and database connection in Api code:-
+
+1. Extract the given zip file
+2. Go to application->config folder.
+3. Here you have to make changes in two files:- config.php and database.php files.
+4. Open config.php file in any editor. 
+4.1. In this file, search $config['base_url'] = 'http://54.245.141.246/kidictive/' //replace the url with your url where you have placed the code. 
+5. Open database.php file in any editor.
+5.1. Go to the end of the file. Here you will find $db['default'] = array();
+5.2. Enter the details of your database in the following fields:-
+	'username' => 'Database User',
+	'password' => 'Database Password',
+	'database' => 'Database Name',
+	
+Click Save. Now your project is connected to your database and your App will work fine. 
+
+-----------------------------------------------------------------
+To change Email Address:-
+
+1. Go to application->controllers folder. 
+2. Open Api.php file in editor.
+3. You will see a public function emailsend($email) function in the strating of file. 
+4. Here search for "$this->email->from('your-name@gmail.com');" and replace "your-name@gmail.com" with your original email address. 
+
+That's it. 
